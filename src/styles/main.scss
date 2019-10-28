@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// abstracts / (or utilities)
+@import "utilities/variables";
+@import "utilities/breakpoints";
+@import "utilities/flexbox";
+@import "utilities/mixins";
+
+//  base
+@import "base/generic";
+@import "base/reset";
+
+//  components (or modules/)
+@import "components/hero-slider";
+@import "components/body-boxes";
+@import "components/testimonials";
+@import "components/see-results";
+@import "components/instagram-feed";
+
+//  layout
+@import "layout/header";
+@import "layout/footer";
+//  pages
+
+//  vendors
+@import "vendors/slick";
+@import "vendors/slick-theme";

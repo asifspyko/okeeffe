@@ -1,0 +1,303 @@
+/** 
+ * Generic
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: $roboto;
+    color: $body_color;
+    @include font-size(16px);
+    padding-top: 120px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $rift;
+    font-weight: bold;
+}
+
+.overflow-stopped {
+    overflow: hidden;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-strong {
+    font-weight: 700;
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-33 {
+    width: 33.3%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-lg {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    @include flex;
+    margin: 0 -15px;
+}
+
+.col-tablet {
+    @include tablet {
+        @include flex-direction(column);
+    }
+}
+
+.col-tablet-reverse {
+    @include tablet {
+        @include flex-direction(column-reverse);
+    }
+}
+
+.col-8,
+.col-4 {
+    padding: 0 15px;
+    width: 100%;
+}
+
+.col-8 {
+    max-width: 72%;
+}
+
+.col-4 {
+    max-width: 28%;
+}
+
+.col-12-tablet {
+    @include tablet {
+        max-width: 100%;
+    }
+}
+
+.col-6-tablet {
+    @include tablet {
+        max-width: 50%;
+    }
+}
+
+.col-12-sm {
+    @include mobile {
+        max-width: 100%;
+    }
+}
+
+.visible-mobile {
+    display: block;
+
+    @include min-tablet {
+        display: none;
+    }
+}
+
+.hidden-mobile {
+    display: block;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: $white;
+    background: none;
+    font-weight: 500;
+    @include font-size(16px);
+    border-radius: 6px;
+    line-height: 22px;
+    text-align: center;
+    padding: 13px 16px;
+    @include prefix(transition, 0.2s all ease);
+
+    &--block {
+        display: block;
+    }
+
+    &--sm {
+        min-width: 180px;
+        padding: 11px 16px;
+        line-height: 18px;
+        @include font-size(14px);
+        font-weight: bold;
+        background: $green;
+
+        &:hover {
+            background: $green_hover;
+        }
+
+        &--ghost {
+            border: 1px solid $body_color;
+            color: $body_color;
+            background: $white;
+
+            &:hover {
+                background: $white;
+            }
+        }
+    }
+
+    &--transparent {
+        background: none;
+        border: 1px solid $white;
+
+        &:hover {
+            background: $white;
+            color: $body_color;
+        }
+    }
+
+    &--primary {
+        background: $green;
+
+        &:hover {
+            background: $green_hover;
+        }
+    }
+
+    &--dark {
+        background: $bg_dark;
+
+        &:hover {
+            background: $bg_dark_hover;
+        }
+    }
+
+    &--orange {
+        background: $orange;
+
+        &:hover {
+            background: $orange_hover;
+        }
+    }
+
+    &--blue {
+        background: $blue;
+
+        &:hover {
+            background: $blue_hover;
+        }
+    }
+}
+
+.link {
+    @include font-size(16px);
+    line-height: 23px;
+
+    &--green {
+        color: $green;
+    }
+}
+
+.chat-popup {
+    position: fixed;
+    left: 42px;
+    bottom: 58px;
+    z-index: 99;
+
+    .chat-toggler {
+        height: 50px;
+        background: $white;
+        @include prefix (box-shadow, 0px 4px 8px rgba(0, 0, 0, 0.15));
+        border-radius: 25px;
+        @include flex;
+        @include align-items(center);
+        font-weight: 500;
+        @include font-size(14px);
+        line-height: 16px;
+        border: none;
+        text-transform: uppercase;
+        padding-right: 22px;
+        cursor: pointer;
+
+        span {
+            border-radius: 50%;
+            border: 2px solid $white;
+            background: $green;
+            height: 50px;
+            width: 50px;
+            margin-right: 15px;
+            @include flex;
+            @include justify-content(center);
+            @include align-items(center);
+        }
+    }
+}

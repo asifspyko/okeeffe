@@ -1,0 +1,51 @@
+$white: #fff;
+$dim_white: #f4f4f4;
+$green: #3DAD2C;
+$green_opac: rgba(61, 173, 44, 0.25);
+$green_hover: #00823D;
+$light-green: #A6D894;
+$orange: #FF8200;
+$orange_opac: rgba(255, 132, 0, 0.25);
+$orange_hover: #FFA800;
+$yellow: #F8BD00;
+$yellow_opac: rgba(248, 190, 0, 0.25);
+$blue: #00A1E1;
+$blue_opac: rgba(0, 161, 225, 0.25);
+$blue_hover: #0BA5E2;
+$red: #E2231A;
+$red_opac: rgba(226, 36, 26, 0.25);
+
+$bg_dark: #4E4E4E;
+$bg_dark_hover: #6B6B6B;
+$grey: #77777A;
+$dark_grey: #535353;
+$body_color: #666666;
+$darker: #ccc;
+
+// Fonts Fallback
+$typographic-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+// Fonts
+$rift: 'Rift',$typographic-font-family;
+$rift-demi: 'Rift Demi',$typographic-font-family;
+$roboto: 'Roboto', sans-serif,$typographic-font-family;
+$roboto-slab: 'Roboto Slab', serif,$typographic-font-family;
+$oswald: 'Oswald', sans-serif,$typographic-font-family;
+
+
+
+// break Points Maximum
+$desktop-lg: 1600px;
+$desktop: 1399px;
+$desktop-sm: 1360px;
+$tablet-lg: 1199px;
+$tablet: 991px;
+$mobile: 767px;
+$mobile-xs: 374px;
+
+
+// Break Points Minimum
+$min-desktop: 1200px;
+$min-tablet-lg: 992px;
+$min-tablet: 768px;
+$min-mobile: 320px;

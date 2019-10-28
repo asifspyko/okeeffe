@@ -1,0 +1,40 @@
+.instagram-feed {
+    padding: 100px 0;
+    text-align: center;
+
+    .insta-icon {}
+
+    h3 {
+        font-weight: 600;
+        @include font-size(32px);
+        line-height: 38px;
+        margin-bottom: 10px;
+    }
+
+    .insta-grid {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .insta-feed-block {
+            padding: 15px;
+
+            img {
+                width: 100%;
+            }
+        }
+        .slick-arrow{
+            background: url(../assets/images/chevron-right.svg) no-repeat center center;
+            height: 31px;
+            width: 30px;
+            &::before{
+                display: none;
+            }
+            &.slick-next {
+                @include prefix (transform, rotate(180deg));
+                right: -45px;
+            }
+            &.slick-prev {
+                left: -45px;
+            }
+        }
+    }
+}

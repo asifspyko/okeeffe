@@ -1,0 +1,38 @@
+{
+  "name": "okeeffe",
+  "private": true,
+  "description": "",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "env-cmd gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+  },
+  "dependencies": {
+    "gatsby": "^2.13.70",
+    "gatsby-image": "^2.2.12",
+    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
+    "gatsby-plugin-sass": "^2.1.9",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-slick": "^0.25.2",
+    "react-tabs": "^3.0.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^4.3.2"
+  },
+  "devDependencies": {
+    "env-cmd": "^9.0.3",
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

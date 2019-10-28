@@ -1,0 +1,141 @@
+header {
+    padding: 20px 60px;
+    background: $green;
+    border-bottom: 7px solid $light-green;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+    .header-inner {
+        @include flex;
+        @include justify-content(space-between);
+        @include align-items(center);
+
+        .logo {
+            a {
+                display: block;
+
+                img {
+                    height: 73px;
+                }
+            }
+        }
+
+        .site-nav {
+            ul {
+                @include flex;
+                @include justify-content(center);
+                @include align-items(center);
+
+                li {
+                    margin: 0 10px;
+
+                    a {
+                        padding: 13px;
+                        font-weight: 500;
+                        @include font-size(15px);
+                        line-height: 18px;
+                        color: $white;
+                        @include flex;
+                        @include align-items(center);
+                    }
+
+                    &.has-dropdown {
+                        >a {
+                            &::after {
+                                content: url(../assets/images/chevron-down.svg);
+                                margin-left: 10px;
+                                margin-top: -4px;
+                            }
+                        }
+
+                        .dropdown-menu {
+                            display: flex;
+                            position: fixed;
+                            background: gray;
+
+                            .links-block {
+                                &.nth :first-child{
+                                    border-bottom: 3px solid $blue;
+
+                                }
+                                h3 {
+                                    font-size: 26px;
+                                    font-weight: 700;
+                                    margin: 0 10px;
+                                    text-align: center;
+                                }
+
+                                ul {
+                                    display: block;
+                                    li {
+                                        link {
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-wrap {
+            @include flex;
+            @include align-items(center);
+
+            .language-picker {
+                a {
+                    font-weight: 500;
+                    @include font-size(15px);
+                    line-height: 18px;
+                    color: $white;
+                    margin-right: 20px;
+                }
+            }
+
+            form {
+                position: relative;
+                height: 50px;
+                width: 210px;
+
+                &:focus {
+                    width: 300px;
+                }
+
+                @include placeholder {
+                    color: $grey;
+                }
+
+                input {
+                    height: 50px;
+                    width: 100%;
+                    background: $white;
+                    border-radius: 25px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    color: $body_color;
+                    transition: 0.2s all ease;
+                    border: none;
+                    @include font-size(15px);
+                    line-height: 18px;
+                    padding: 0 55px 0 15px;
+                }
+
+                button {
+                    position: absolute;
+                    right: 20px;
+                    top: 15px;
+                    outline: none;
+                    box-shadow: none;
+                    border: none;
+                    background: none;
+                }
+            }
+        }
+    }
+}

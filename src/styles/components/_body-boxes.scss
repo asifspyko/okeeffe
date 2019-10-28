@@ -1,0 +1,148 @@
+.body-boxes {
+    padding: 33px 0;
+    .boxes-wrapper {
+        max-width: 1380px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        .boxes-inner {
+            @include flex;
+
+            .body-block-outer {
+                padding: 10px;
+                height: 100%;
+
+                .body-block {
+                    height: 100%;
+                    text-align: center;
+                    position: relative;
+
+                    .block-inner {
+                        padding: 41px 38px 56px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        @include flex;
+                        @include justify-content(center);
+                        @include align-items(center);
+
+                        .block-content {
+                            color: $white;
+
+                            h3 {
+                                font-weight: bold;
+                                font-size: 60px;
+                                line-height: 72px;
+                                margin-bottom: 50px;
+                            }
+
+                            p {
+                                font-weight: 500;
+                                font-size: 16px;
+                                line-height: 26px;
+                                margin-bottom: 50px;
+                            }
+                        }
+                    }
+
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        content: "";
+                        opacity: 0.8;
+                        @include prefix(transition, 0.5s all ease);
+                    }
+
+                    &--green {
+                        &::before {
+                            background: $green;
+                        }
+
+                        &:hover {
+                            .block-content {
+                                .btn {
+                                    background: $green;
+                                }
+                            }
+                        }
+                    }
+
+                    &--orange {
+                        &::before {
+                            background: $orange;
+                        }
+
+                        &:hover {
+                            .block-content {
+                                .btn {
+                                    background: $orange;
+                                }
+                            }
+                        }
+                    }
+
+                    &--yellow {
+                        &::before {
+                            background: $yellow;
+                        }
+
+                        &:hover {
+                            .block-content {
+                                .btn {
+                                    background: $yellow;
+                                }
+                            }
+                        }
+                    }
+
+                    &--blue {
+                        &::before {
+                            background: $blue;
+                        }
+
+                        &:hover {
+                            .block-content {
+                                .btn {
+                                    background: $blue;
+                                }
+                            }
+                        }
+                    }
+
+
+                    &:hover {
+                        &::before {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+            }
+
+            .has-two-blocks {
+                .body-block-outer {
+                    height: 50%;
+
+                    .body-block {
+                        .block-inner {
+                            .block-content {
+                                h3 {
+                                    margin-bottom: 25px;
+                                }
+
+                                p {
+                                    margin-bottom: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

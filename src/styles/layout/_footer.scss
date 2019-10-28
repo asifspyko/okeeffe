@@ -1,0 +1,188 @@
+.footer {
+    &__banner {
+        background: $green;
+        padding: 19px;
+        color: $white;
+        @include flex;
+        @include justify-content(center);
+        @include align-items(center);
+
+        @include mobile {
+            @include flex-direction(column);
+        }
+
+        h3 {
+            @include font-size(32px);
+            line-height: 38px;
+            margin-right: 15px;
+
+            @include mobile {
+                margin-bottom: 30px;
+            }
+        }
+
+        span {
+            font-weight: 500;
+        }
+    }
+
+    &__inner {
+        background: $dark_grey;
+        padding-top: 53px;
+        padding-bottom: 110px;
+
+        .logo-wrapper {
+            margin-bottom: 54px;
+
+            a {
+                display: inline-block;
+
+                img {
+                    display: block;
+                }
+            }
+        }
+
+        .footer-navigation {
+            @include flex;
+            @include justify-content(space-between);
+
+            .col-left {
+                @include flex;
+
+                .footer-navigation__block {
+                    &.ml-30 {
+                        margin-left: 30px;
+                    }
+
+                    &:last-child {
+                        margin-left: 60px;
+                    }
+                }
+            }
+
+            &__block {
+                min-width: 135px;
+                margin-right: 15px;
+            }
+
+            .block-title {
+                font-family: $roboto-slab;
+                font-weight: bold;
+                @include font-size(13px);
+                line-height: 16px;
+                margin-bottom: 20px;
+                color: $white;
+                display: block;
+            }
+
+            &__list {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+
+                    a {
+                        @include font-size(13px);
+                        line-height: 20px;
+                        color: $darker;
+                    }
+                }
+            }
+
+            .col-right {
+                .block-title {
+                    margin-bottom: 27px;
+                }
+
+                p {
+                    @include font-size(13px);
+                    line-height: 21px;
+                    color: $white;
+                }
+
+                form {
+                    @include flex;
+                    margin-top: 15px;
+
+                    @include placeholder {
+                        color: $darker;
+
+                    }
+
+                    input {
+                        border: 1px solid $darker;
+                        border-right: none;
+                        height: 72px;
+                        color: $white;
+                        @include font-size(13px);
+                        background: none;
+                        padding: 0 27px;
+                        background: $dark_grey;
+                        position: relative;
+                        z-index: 1;
+
+                    }
+
+                    button {
+                        border: 1px solid $darker;
+                        border-left: none;
+                        width: 60px;
+                        @include flex;
+                        @include align-items(center);
+                        @include justify-content(center);
+                        background: none;
+                        transition: 0.2s all ease;
+                        cursor: pointer;
+
+                        &:hover {
+                            box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, .5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background: #464646;
+        padding: 19px 0;
+        &__wrapper {
+            @include flex;
+            @include align-items(center);
+            @include justify-content(space-between);
+
+            .copyrights-text {
+                font-weight: 500;
+                @include font-size(13px);
+                line-height: 20px;
+                color: $darker;
+            }
+
+            .social-links {
+                ul {
+                    @include flex;
+                    @include align-items(center);
+
+                    li {
+                        padding: 0 5px;
+
+                        a {
+                            height: 32px;
+                            width: 32px;
+                            border-radius: 50%;
+                            background: #535353;
+                            @include flex;
+                            @include align-items(center);
+                            @include justify-content(center);
+                            @include prefix  (transition, 0.2s all ease);
+                            &:hover{
+                                @include prefix (transform, scale(1.1));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
